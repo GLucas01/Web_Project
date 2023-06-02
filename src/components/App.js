@@ -6,6 +6,7 @@ import Cart from './Cart'
 import PdfCreator from './PdfCreator'
 import { useState } from 'react'
 import UploadImage from './UploadImage'
+import Main from './Main'
 
 function App() {
 	const [cart, updateCart] = useState(0)
