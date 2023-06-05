@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
-import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import PdfCreator from './components/PdfCreator'
+import Cart from './components/Cart';
+
+import { Routes, Route } from 'react-router-dom';
+import App from './components/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App /> {/* The various pages will be displayed by the `Main` component. */}
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/signup" element={<PdfCreator />} />
+    </Routes> {/* The various pages will be displayed by the `Main` component. */}
   </BrowserRouter>
 );
 

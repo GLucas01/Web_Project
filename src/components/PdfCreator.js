@@ -32,7 +32,7 @@ import {
 
   
   // Create Document Component
-  function BasicDocument() {
+  function PdfCreator() {
     return (
       <PDFViewer style={styles.viewer}>
         {/* Start of the document*/}
@@ -63,4 +63,4 @@ import {
       </PDFViewer>
     );
   }
-  export default BasicDocument;
+  export default PdfCreator;
