@@ -3,11 +3,14 @@ import logo from '../assets/logo.png'
 import ShoppingList from './ShoppingList'
 import QuestionForm from './QuestionForm'
 import Cart from './Cart'
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import UploadImage from './UploadImage'
+import Identifier from './Identifier'
 
 
 function App() {
+
+	const [user, setUser] = useState({});
 	const [cart, updateCart] = useState(0)
 	return (
 		<div>
@@ -15,6 +18,7 @@ function App() {
 				<img src={logo} alt='La maison jungle' className='lmj-logo' />
 				<h1 className='lmj-title'>La maison jungle</h1>
 			</Banner>
+			<Identifier user={user} setUser={setUser} />
 			<UploadImage />
 			<div className='lmj-layout-inner'>
                 <Cart cart={cart} updateCart={updateCart} />
