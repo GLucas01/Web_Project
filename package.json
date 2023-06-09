@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.4",
     "@react-pdf/render": "^3.2.6",
     "@react-pdf/renderer": "^3.1.11",
     "@testing-library/jest-dom": "^5.14.1",
@@ -13,8 +16,12 @@
     "potrace-js": "^0.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
+    "react-pdf-viewer": "^0.1.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
+    "react-slideshow-image": "^4.2.1",
+    "react-to-print": "^2.14.13",
     "satori": "^0.9.1",
     "web-vitals": "^2.1.0"
   },

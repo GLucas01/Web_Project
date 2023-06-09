@@ -1,0 +1,44 @@
+.header {
+    z-index: 9999;
+    position : sticky ;
+    top : 0 ;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    border-bottom: 0ch;
+    color: black;
+  }
+
+.navbar {
+    display: inline-block;
+    align-items: right;
+    font-size: 15 px;
+    color : black;
+}
+
+.motiv_texte {
+    display: inline-block;
+    font-size: 15 px;
+}
+
+.site_name {
+    display: inline-block; 
+    font-size: 30 px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    color : black;
+}
+
+.nav-links li {
+    margin-right: 50px;
+    justify-content: space-between;
+    color : black;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
