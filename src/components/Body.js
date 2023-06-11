@@ -1,56 +1,73 @@
-import React, { useRef, useState } from "react";
-import ReactToPrint from "react-to-print";
-import { Download } from "react-feather";                     //on importe les dépendances
-
-import Editor from "./Editor";
-
+import React, { useState } from 'react';
 import styles from "../styles/Body.module.css";
 
-function Body() {
-  const sections = {                                  // définis les différentes sections du cv
-    basicInfo: "Infos personelles",
-    workExp: "Expériences",
-    education: "Education",
-    skills: "Compétences", // Nouvelle section ajoutée
-  };
-  const resumeRef = useRef();
+function CVForm() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [experience, setExperience] = useState('');
+  const [education, setEducation] = useState('');
 
-  const [resumeInformation, setResumeInformation] = useState({
-    [sections.basicInfo]: {
-      id: sections.basicInfo,
-      sectionTitle: sections.basicInfo,
-      detail: {},
-    },
-    [sections.workExp]: {
-      id: sections.workExp,
-      sectionTitle: sections.workExp,
-      details: [],
-    },
-    [sections.education]: {
-      id: sections.education,
-      sectionTitle: sections.education,
-      details: [],
-    },
-    [sections.skills]: { // Nouvelle section ajoutée
-      id: sections.skills,
-      sectionTitle: sections.skills,
-      details: [],
-    },
-  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Ici, vous pouvez traiter les données du formulaire, telles que les envoyer à un serveur ou les afficher dans la console.
+    console.log({
+      name,
+      email,
+      phone,
+      experience,
+      education,
+    });
+  };
 
   return (
-    <div className={styles.container}>
-      <p className={styles.heading}>Formulaire de remplissage du CV</p>
-      <div className={styles.toolbar}></div>
-      <div className={styles.main}>
-        <Editor
-          sections={sections}
-          information={resumeInformation}
-          setInformation={setResumeInformation}
-        />
-      </div>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="name">Nom :</label>
+      <input
+        type="text"
+        id="name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+      />
+
+      <label htmlFor="email">Email :</label>
+      <input
+        type="email"
+        id="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+
+      <label htmlFor="phone">Téléphone :</label>
+      <input
+        type="tel"
+        id="phone"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+        required
+      />
+
+      <label htmlFor="experience">Expérience :</label>
+      <textarea
+        id="experience"
+        value={experience}
+        onChange={(e) => setExperience(e.target.value)}
+        required
+      ></textarea>
+
+      <label htmlFor="education">Formation :</label>
+      <textarea
+        id="education"
+        value={education}
+        onChange={(e) => setEducation(e.target.value)}
+        required
+      ></textarea>
+
+      <button type="submit">Soumettre</button>
+    </form>
   );
 }
 
-export default Body;
+export default CVForm;
