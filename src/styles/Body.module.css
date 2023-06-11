@@ -2,8 +2,12 @@
 form {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 label {
@@ -13,8 +17,14 @@ label {
 
 input,
 textarea {
-  padding: 5px;
+  padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
 }
 
 button {
@@ -22,9 +32,21 @@ button {
   background-color: #007bff;
   color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* Style pour les messages de validation */
+input:required:invalid,
+textarea:required:invalid {
+  border: 1px solid red;
+}
+
+input:required:valid,
+textarea:required:valid {
+  border: 1px solid green;
 }

@@ -2,32 +2,73 @@ import React, { useState } from 'react';
 import styles from "../styles/Body.module.css";
 
 function CVForm() {
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [address, setAddress] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [experience, setExperience] = useState('');
-  const [education, setEducation] = useState('');
+  const [associativeExperience, setAssociativeExperience] = useState('');
+  const [hobbies, setHobbies] = useState('');
+  const [languages, setLanguages] = useState('');
+  const [skills, setSkills] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ici, vous pouvez traiter les données du formulaire, telles que les envoyer à un serveur ou les afficher dans la console.
     const formData = {
-      name,
+      firstName,
+      lastName,
+      address,
       email,
       phone,
       experience,
-      education,
-    };;
+      associativeExperience,
+      hobbies,
+      languages,
+      skills,
+    };
+
+    console.log(formData);
+    // Envoyer les données à un serveur, les stocker dans une base de données, etc.
+
+    setFirstName('');
+    setLastName('');
+    setAddress('');
+    setEmail('');
+    setPhone('');
+    setExperience('');
+    setAssociativeExperience('');
+    setHobbies('');
+    setLanguages('');
+    setSkills('');
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Nom :</label>
+      <label htmlFor="firstName">Prénom :</label>
       <input
         type="text"
-        id="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        id="firstName"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        required
+      />
+
+      <label htmlFor="lastName">Nom :</label>
+      <input
+        type="text"
+        id="lastName"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+        required
+      />
+
+      <label htmlFor="address">Adresse :</label>
+      <input
+        type="text"
+        id="address"
+        value={address}
+        onChange={(e) => setAddress(e.target.value)}
         required
       />
 
@@ -57,11 +98,35 @@ function CVForm() {
         required
       ></textarea>
 
-      <label htmlFor="education">Formation :</label>
+      <label htmlFor="associativeExperience">Expérience associative :</label>
       <textarea
-        id="education"
-        value={education}
-        onChange={(e) => setEducation(e.target.value)}
+        id="associativeExperience"
+        value={associativeExperience}
+        onChange={(e) => setAssociativeExperience(e.target.value)}
+        required
+      ></textarea>
+
+      <label htmlFor="hobbies">Loisirs :</label>
+      <textarea
+        id="hobbies"
+        value={hobbies}
+        onChange={(e) => setHobbies(e.target.value)}
+        required
+      ></textarea>
+
+      <label htmlFor="languages">Langues :</label>
+      <textarea
+        id="languages"
+        value={languages}
+        onChange={(e) => setLanguages(e.target.value)}
+        required
+      ></textarea>
+
+      <label htmlFor="skills">Compétences :</label>
+      <textarea
+        id="skills"
+        value={skills}
+        onChange={(e) => setSkills(e.target.value)}
         required
       ></textarea>
 
