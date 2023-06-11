@@ -11,13 +11,13 @@ function CVForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Ici, vous pouvez traiter les données du formulaire, telles que les envoyer à un serveur ou les afficher dans la console.
-    console.log({
+    const formData = {
       name,
       email,
       phone,
       experience,
       education,
-    });
+    };;
   };
 
   return (
