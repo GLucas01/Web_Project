@@ -6,8 +6,8 @@ function Header() {
     const rootElement = document.getElementById("root");
     return (
         <div class='header'>
-            <NavBar></NavBar>
             <h1 class = 'site_name'>CV CREATOR</h1>
+            <NavBar></NavBar>
         </div>
     )
 }

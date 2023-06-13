@@ -7,7 +7,6 @@ const Navbar = () => {
         <ul class="nav-links">
             <li><a href="">Accueil</a></li>
             <li><a href="cvcreator">Créer un CV</a></li>
-            <li><a href="About_us">Notre Equipe</a></li>
             <liv><Identifier /></liv>
         </ul>
     </nav>
