@@ -3,6 +3,7 @@ import {useContext, useEffect, useState} from 'react'
 import { UserContext } from './UserContext';
 import { useNavigate } from 'react-router-dom';
 
+
 function Identifier(){
 	//Outil de changement de page
 	const navigate = useNavigate();
@@ -51,7 +52,6 @@ function Identifier(){
     return(
         <div>
             <div id="signInDiv"></div>
-			{/*<div id="signOutDiv"><button onClick={(e) => handleSignOut(e)}>Sign Out</button></div>*/}
 			<div id="profile"><button onClick={handleProfileClick}>Mon Profil</button></div>
         </div>
         

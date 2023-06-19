@@ -5,9 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import { UserProvider } from './components/UserContext';
-import UserPdf from './components/UserPdf';
 import HomePage from './components/HomePage';
-import CvPage from './components/CvPage';
+import CVPage from './components/CVPage';
+import ProfilePage from './components/ProfilePage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,8 +18,8 @@ root.render(
       <UserProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/cvcreator" element={<CvPage />} />
-          <Route path="/profile" element={<UserPdf />} />
+          <Route path="/cvcreator" element={<CVPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes> {/* The various pages will be displayed by the `Main` component. */}
       </UserProvider>
     </BrowserRouter>

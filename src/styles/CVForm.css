@@ -1,0 +1,54 @@
+/* Styles pour la rubrique Informations personnelles */
+.infos-personnelles {
+  grid-column: 1;
+  background-color: #d4f3ac;
+  padding: 20px;
+}
+.infos-personnelles .colonne {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles pour la rubrique Formation */
+.formation {
+  grid-column: 2;
+  background-color: #b0e3c6;
+  padding: 20px;
+}
+
+.formation .colonne {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles pour la rubrique Expérience */
+.experience {
+  grid-column: 3;
+  background-color: #a1ebe6;
+  padding: 20px;
+}
+
+.experience .colonne {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles pour la rubrique Compétences */
+.comp {
+  grid-column: 4;
+  background-color: #f5d3f7;
+  padding: 20px;
+}
+
+.comp .colonne {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* crée 4 colonnes égales */
+  grid-auto-rows: min-content; /* ajuste la hauteur automatiquement */
+  grid-gap: 20px; /* espace entre les colonnes */
+  margin: 20px; /* espace autour du formulaire */
+}
