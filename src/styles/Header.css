@@ -1,28 +1,37 @@
 .header {
     z-index: 9999;
+    display: flex;
     position : sticky ;
     top : 0 ;
-    padding: 10px;
     text-align: center;
+    justify-content: space-between;
     background: white;
-    border-bottom: 0ch;
+    border-bottom: 2px solid black;
     color: black;
   }
 
+.left-zone {
+    text-align: left;
+  }
+
+.right-zone {
+    text-align: right;
+    background-color: white !important;
+  }
+
 .navbar {
-    display: inline-block;
-    align-items: right;
+    position : relative; 
+    top : 10%;
+    padding-right: 100px !important;
     font-size: 15 px;
     color : black;
-}
-
-.motiv_texte {
-    display: inline-block;
-    font-size: 15 px;
+    background-color: white !important;
 }
 
 .site_name {
-    display: inline-block; 
+    position : relative; 
+    top : 10%;
+    padding-left: 100px !important;
     font-size: 30 px;
 }
 
@@ -30,6 +39,21 @@
     list-style: none;
     display: flex;
     color : black;
+}
+
+.bouton_menu {
+    color : black;
+    background-color: white; 
+    border: none;
+    font-size: larger;
+}
+
+.bouton_menu:hover {
+    color : black;
+    background-color: white; 
+    border: 3px solid black;
+    font-size: x-large;
+    border-radius: 5px;
 }
 
 .nav-links li {
